@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Construa Seu Capital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Construa Seu Capital é um hub de educação financeira e investimentos para ajudar você a construir patrimônio com estratégia e inteligência.">
+
+<style>
+body{
+    margin:0;
+    background:linear-gradient(180deg,#020617,#020b2d);
+    font-family:system-ui,Arial,sans-serif;
+    color:#e5f0ff;
+}
+
+.menu{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(2,6,23,0.95);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.menu-container{
+    max-width:1100px;
+    margin:auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand img{
+    width:46px;
+    height:46px;
+}
+
+.brand span{
+    font-weight:700;
+    color:#7cffb2;
+    font-size:1.1rem;
+}
+
+.links{
+    display:flex;
+    gap:16px;
+}
+
+.links a{
+    text-decoration:none;
+    color:#e5f0ff;
+    font-weight:500;
+}
+
+.links a:hover{color:#1aff6f;}
+
+.hamburger{
+    display:none;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+@media(max-width:700px){
+    .links{
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        right:0;
+        background:#020617;
+        flex-direction:column;
+        padding:20px;
+        gap:14px;
+    }
+    .links.active{display:flex;}
+    .hamburger{display:block;}
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:32px 20px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:64px;
+}
+
+.hero h1{color:#7cffb2;font-size:2.4rem;}
+p{line-height:1.7;font-size:1.05rem;}
+
+.section{margin-bottom:48px;}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:24px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:18px;
+    padding:24px;
+}
+
+.botao{
+    display:inline-block;
+    margin-top:16px;
+    padding:14px 26px;
+    background:#1aff6f;
+    color:#001b0f;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.footer{
+    text-align:center;
+    margin-top:80px;
+    padding-bottom:40px;
+    font-size:0.9rem;
+    opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="brand">
+        <img src="logo.png" alt="Construa Seu Capital">
+        <span>Construa Seu Capital</span>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <div class="links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="renda-fixa-variavel.html">Renda Fixa x Variável</a>
+      <a href="https://andregiovanini.github.io/perfil-investidor/">Descobrir meu perfil</a>
+      <a href="https://www.youtube.com/@ConstruaSeuCapital" target="_blank">Canal</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="hero">
+<h1>Construa Seu Capital</h1>
+<p>Um hub de conteúdo sobre investimentos, educação financeira e construção de patrimônio ao longo do tempo.</p>
+<a class="botao" href="https://andregiovanini.github.io/perfil-investidor/">Descubra seu perfil de investidor</a>
+</div>
+
+<div class="section">
+<h2>O Projeto</h2>
+<div class="card">
+<p>
+Este site é a central do projeto <b>Construa Seu Capital</b>. Aqui você encontra ferramentas, explicações práticas e conteúdos que ajudam a investir com mais clareza, menos ansiedade e melhores decisões.
+</p>
+<a class="botao" href="https://www.youtube.com/@ConstruaSeuCapital" target="_blank">Visitar Canal</a>
+</div>
+</div>
+
+<div class="section">
+<h2>Explore o conteúdo</h2>
+<div class="grid">
+
+<div class="card">
+<h3>🧪 Perfil de Investidor</h3>
+<p>Descubra seu perfil e aprenda como montar sua carteira de forma inteligente.</p>
+<a class="botao" href="https://andregiovanini.github.io/perfil-investidor/">Fazer teste</a>
+</div>
+
+<div class="card">
+<h3>📊 Renda Fixa x Variável</h3>
+<p>Entenda como cada classe de ativo funciona e como combiná-las corretamente.</p>
+<a class="botao" href="renda-fixa-variavel.html">Acessar conteúdo</a>
+</div>
+
+<div class="card">
+<h3>📺 Canal no YouTube</h3>
+<p>Vídeos semanais sobre investimentos, mentalidade financeira e estratégia.</p>
+<a class="botao" href="https://www.youtube.com/@ConstruaSeuCapital" target="_blank">Ir para o canal</a>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+<p>Construa Seu Capital © 2026</p>
+</div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menuLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
