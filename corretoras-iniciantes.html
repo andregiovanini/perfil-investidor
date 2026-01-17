@@ -67,13 +67,28 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
 
+    /* LOGO CLICÁVEL */
     .logo {
       width: 100%;
       height: 70px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
+      margin-bottom: 6px;
+    }
+
+    .logo a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      border-radius: 10px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .logo a:hover {
+      background: rgba(34,197,94,0.08);
+      transform: scale(1.03);
     }
 
     .logo img {
@@ -81,6 +96,13 @@
       max-width: 160px;
       object-fit: contain;
       filter: brightness(1.1);
+    }
+
+    .logo-hint {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
     h2 {
@@ -104,6 +126,20 @@
       color: var(--accent);
     }
 
+    .pros-cons ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+    }
+
+    .pros-cons li {
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      color: #e5e7eb;
+    }
+
     .footer-note {
       margin-top: 50px;
       font-size: 0.85rem;
@@ -124,61 +160,153 @@
 
     <h1>Corretoras sem Taxa para Iniciantes</h1>
     <p class="subtitle">
-      Lista de corretoras brasileiras que oferecem corretagem zero, com foco em quem está começando
-      a investir e busca simplicidade, segurança e baixo custo.
+      Lista de corretoras brasileiras que já utilizei que oferecem corretagem zero, com foco em quem está começando
+      a investir e busca simplicidade, segurança e custo zero.
     </p>
 
     <div class="grid">
 
-      <!-- Nubank / NuInvest -->
+      <!-- NuInvest -->
       <div class="card">
         <div class="logo">
-          <img src="assets/logos/nubank.png" alt="NuInvest - Nubank">
+          <a href="https://www.nuinvest.com.br"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Visitar site oficial da NuInvest">
+            <img src="assets/logos/nubank.png" alt="NuInvest - Nubank">
+          </a>
         </div>
+        <div class="logo-hint">Clique no ícone para visitar o site oficial</div>
+
         <h2>NuInvest (Nubank)</h2>
         <p>Plataforma simples, ideal para quem está começando e já usa o Nubank no dia a dia.</p>
+
         <div class="list">
-          <p><strong>Pontos fortes:</strong> Interface intuitiva, zero corretagem, integração com Nubank.</p>
-          <p><strong>Pontos fracos:</strong> Menos ferramentas avançadas.</p>
+          <strong>✔ Pontos fortes:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Zero corretagem</li>
+              <li>Tudo em um único app</li>
+              <li>Bom para quem quer simplicidade</li>
+              <li>Fácil de acompanhar saldo e investimentos</li>
+            </ul>
+          </div>
+
+          <strong>⚠ Pontos fracos:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Menos ferramentas avançadas</li>
+              <li>Menos recursos para investidores experientes</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <!-- Clear -->
       <div class="card">
         <div class="logo">
-          <img src="assets/logos/clear.png" alt="Clear Corretora">
+          <a href="https://www.clear.com.br"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Visitar site oficial da Clear">
+            <img src="assets/logos/clear.png" alt="Clear Corretora">
+          </a>
         </div>
+        <div class="logo-hint">Clique no ícone para visitar o site oficial</div>
+
         <h2>Clear</h2>
         <p>Corretora popular entre iniciantes e traders que buscam custo zero.</p>
+
         <div class="list">
-          <p><strong>Pontos fortes:</strong> Corretagem zero, muitas ferramentas educacionais.</p>
-          <p><strong>Pontos fracos:</strong> Plataforma pode confundir no início.</p>
+          <strong>✔ Pontos fortes:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Zero corretagem</li>
+              <li>Plataforma mais completa</li>
+              <li>Boa para ações e FIIs</li>
+              <li>Pertence ao grupo XP</li>
+            </ul>
+          </div>
+
+          <strong>⚠ Pontos fracos:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Interface pode confundir no início</li>
+              <li>Exige mais atenção do usuário</li>
+            </ul>
+          </div>
         </div>
       </div>
 
       <!-- Banco Inter -->
       <div class="card">
         <div class="logo">
-          <img src="assets/logos/inter.png" alt="Banco Inter">
+          <a href="https://www.bancointer.com.br"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Visitar site oficial do Banco Inter">
+            <img src="assets/logos/inter.png" alt="Banco Inter">
+          </a>
         </div>
+        <div class="logo-hint">Clique no ícone para visitar o site oficial</div>
+
         <h2>Banco Inter</h2>
         <p>Conta digital integrada com investimentos em renda fixa e variável.</p>
+
         <div class="list">
-          <p><strong>Pontos fortes:</strong> Tudo em um só app, sem taxas.</p>
-          <p><strong>Pontos fracos:</strong> Ferramentas avançadas limitadas.</p>
+          <strong>✔ Pontos fortes:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Zero corretagem</li>
+              <li>Tudo em um único app</li>
+              <li>Boa experiência para iniciantes</li>
+              <li>Facilidade no controle financeiro</li>
+            </ul>
+          </div>
+
+          <strong>⚠ Pontos fracos:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Menos recursos avançados</li>
+              <li>Plataforma mais básica</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- XP -->
+      <!-- Rico -->
       <div class="card">
         <div class="logo">
-          <img src="assets/logos/xp.png" alt="XP Investimentos">
+          <a href="https://www.rico.com.vc"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Visitar site oficial da Rico">
+            <img src="assets/logos/rico.png" alt="Rico Investimentos">
+          </a>
         </div>
-        <h2>XP Investimentos</h2>
-        <p>Uma das maiores corretoras do Brasil, com ampla oferta de produtos.</p>
+        <div class="logo-hint">Clique no ícone para visitar o site oficial</div>
+
+        <h2>Rico Investimentos</h2>
+        <p>Uma das corretoras mais conhecidas para iniciantes e intermediários.</p>
+
         <div class="list">
-          <p><strong>Pontos fortes:</strong> Grande variedade de investimentos.</p>
-          <p><strong>Pontos fracos:</strong> Interface mais complexa para iniciantes.</p>
+          <strong>✔ Pontos fortes:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Zero corretagem</li>
+              <li>Boa organização da carteira</li>
+              <li>Conteúdos educativos</li>
+              <li>Grupo XP</li>
+            </ul>
+          </div>
+
+          <strong>⚠ Pontos fracos:</strong>
+          <div class="pros-cons">
+            <ul>
+              <li>Plataforma mais carregada</li>
+              <li>Excesso de informações no início</li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -186,7 +314,6 @@
 
     <p class="footer-note">
       ⚠️ Este conteúdo é educativo. Não é recomendação de investimento.  
-      Apenas apresento plataformas para fins de conhecimento e comparação.
     </p>
 
   </div>
