@@ -134,28 +134,135 @@ p{line-height:1.7;font-size:1.05rem;}
     font-size:0.9rem;
     opacity:0.8;
 }
+/* SUBMENU BASE */
+.submenu {
+  position: relative;
+}
+
+/* Área do gatilho (aumenta área de hover) */
+.submenu > span {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 6px;
+}
+
+/* Submenu escondido */
+.submenu-links {
+  display: none;
+  position: absolute;
+  top: 100%;              /* COLADO no menu */
+  left: 0;
+  margin-top: 6px;        /* pequeno espaçamento visual */
+  background: #020617;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  min-width: 240px;
+  padding: 14px;
+  z-index: 1000;
+}
+
+/* Mantém hover ativo quando mouse está no submenu */
+.submenu:hover .submenu-links,
+.submenu-links:hover {
+  display: block;
+}
+
+/* Links internos */
+.submenu-links a {
+  display: block;
+  padding: 10px 14px;
+  color: #e5f0ff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.submenu-links a:hover {
+  background: rgba(26,255,111,0.15);
+  color: #1aff6f;
+}
+
+/* DESKTOP */
+@media (min-width: 701px) {
+  .submenu:hover .submenu-links
+}
+/* ALINHAMENTO VERTICAL PERFEITO DO MENU */
+.links {
+  display: flex;
+  align-items: center; /* força todos na mesma linha */
+  gap: 16px;
+}
+
+/* Garante que links simples tenham a mesma altura visual */
+.links > a {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;        /* mesma altura visual do submenu */
+}
+
+/* Garante que submenus também sigam a mesma altura */
+.submenu {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+}
+
+
 </style>
 </head>
+<script>
+function toggleMenu() {
+  document.getElementById("menuLinks").classList.toggle("active");
+}
+
+// Submenu mobile (abre ao toque)
+document.querySelectorAll('[data-menu] > span').forEach(item => {
+  item.addEventListener('click', function () {
+    if (window.innerWidth <= 700) {
+      this.parentElement.classList.toggle('active');
+    }
+  });
+});
+</script>
+
 
 <body>
 
 <nav class="menu">
   <div class="menu-container">
     <div class="brand">
-        <img src="logo.png" alt="Construa Seu Capital">
-        <span>Construa Seu Capital</span>
+      <img src="logo.png" alt="Construa Seu Capital">
+      <span>Construa Seu Capital</span>
     </div>
 
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
     <div class="links" id="menuLinks">
       <a href="index.html">Home</a>
-      <a href="renda-fixa-variavel.html">Renda Fixa x Variável</a>
-      <a href="perfil-investidor.html">Descobrir meu perfil</a>
+
+      <div class="submenu" data-menu>
+        <span>Aprender ▾</span>
+        <div class="submenu-links">
+          <a href="perfil-investidor.html">Perfil de Investidor</a>
+          <a href="renda-fixa-variavel.html">Renda Fixa x Variável</a>
+        </div>
+      </div>
+
+      <div class="submenu" data-menu>
+        <span>Ferramentas ▾</span>
+        <div class="submenu-links">
+          <a href="ferramentas-consolidadoras.html">Consolidadoras</a>
+          <a href="corretoras-iniciantes.html">Corretoras sem Taxa</a>
+        </div>
+      </div>
+
       <a href="https://www.youtube.com/@ConstruaSeuCapital" target="_blank">Canal</a>
     </div>
   </div>
 </nav>
+
+
+
 
 <div class="container">
 <div class="card" style="border:1px solid rgba(255,255,255,0.15); background:rgba(255,255,255,0.04); margin-bottom:32px">
@@ -251,6 +358,18 @@ não se constrói em promessas, mas em processos.
   <a class="botao" href="corretoras-iniciantes.html">Ver corretoras</a>
 </div>
 
+<div class="card">
+  <h3>🧰 Ferramentas Consolidadoras</h3>
+  <p>
+    Conheça ferramentas que ajudam a organizar, consolidar e acompanhar
+    investimentos espalhados em diferentes corretoras e bancos,
+    trazendo mais clareza sobre sua carteira e patrimônio.
+  </p>
+  </br>
+  <a class="botao" href="ferramentas-consolidadoras.html">
+    Ver ferramentas
+  </a>
+</div>
 
 <div class="card">
 <h3>📺 Canal no YouTube</h3>
