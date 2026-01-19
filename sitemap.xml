@@ -2,9 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://andregiovanini.github.io/perfil-investidor/</loc>
-    <lastmod>2026-01-13</lastmod>
-    <priority>1.0</priority>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/</loc>
+  </url>
+
+  <url>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/perfil-investidor.html</loc>
+  </url>
+
+  <url>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/renda-fixa-variavel.html</loc>
+  </url>
+
+  <url>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/nomenclatura.html</loc>
+  </url>
+
+  <url>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/ferramentas-consolidacao.html</loc>
+  </url>
+
+  <url>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/corretoras-iniciantes.html</loc>
+  </url>
+
+  <url>
+    <loc>https://andregiovanini.github.io/ConstruaSeuCapital/livros-investimentos.html</loc>
   </url>
 
 </urlset>
